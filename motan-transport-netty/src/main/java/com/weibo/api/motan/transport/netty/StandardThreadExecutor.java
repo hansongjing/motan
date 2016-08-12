@@ -167,11 +167,13 @@ class ExecutorQueue extends LinkedTransferQueue<Runnable> {
 		int poolSize = threadPoolExecutor.getPoolSize();
 
 		// we are maxed out on threads, simply queue the object
+		//当前线程池的个数等于maxThreade,入队
 		if (poolSize == threadPoolExecutor.getMaximumPoolSize()) {
 			return super.offer(o);
 		}
 		// we have idle threads, just add it to the queue
 		// note that we don't use getActiveCount(), see BZ 49730
+		//如果线程池的正在这行的任务数量
 		if (threadPoolExecutor.getSubmittedTasksCount() <= poolSize) {
 			return super.offer(o);
 		}

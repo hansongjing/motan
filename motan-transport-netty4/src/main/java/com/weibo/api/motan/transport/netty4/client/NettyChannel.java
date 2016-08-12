@@ -63,7 +63,7 @@ public class NettyChannel implements com.weibo.api.motan.transport.Channel {
 		this.nettyClient.registerCallback(request.getRequestId(), response);
 
 		ChannelFuture writeFuture = this.channel.writeAndFlush(request);
-
+       //等待结果
 		boolean result = writeFuture.awaitUninterruptibly(timeout, TimeUnit.SECONDS);
 
 		if (result && writeFuture.isSuccess()) {
