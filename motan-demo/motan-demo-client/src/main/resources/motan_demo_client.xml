@@ -40,4 +40,10 @@
                    interface="com.weibo.motan.demo.service.MotanDemoService"
                    connectTimeout="300" requestTimeout="300" basicReferer="motantestClientBasicConfig"/>
 
+    <motan:referer id="learnRefer"
+    interface="motan.learn"
+    connectTimeout="300" requestTimeout="300" basicReferer="motantestClientBasicConfig"/>
+
+
+
 </beans>

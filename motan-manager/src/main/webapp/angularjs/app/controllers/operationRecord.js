@@ -43,8 +43,8 @@ app.controller('OperationRecordCtrl', function ($scope, $rootScope, $modal, Conf
             },
             {
                 name: '操作类型',
-                field: 'type'
-            },
+        field: 'type'
+},
             {
                 name: 'Group组名',
                 field: 'groupName'

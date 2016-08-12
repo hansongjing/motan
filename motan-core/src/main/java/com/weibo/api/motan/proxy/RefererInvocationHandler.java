@@ -84,7 +84,7 @@ public class RefererInvocationHandler<T> implements InvocationHandler {
         request.setInterfaceName(clz.getName());
         request.setAttachment(URLParamType.requestIdFromClient.getName(), String.valueOf(RequestIdGenerator.getRequestIdFromClient()));
 
-        // 当 referer配置多个protocol的时候，比如A,B,C，
+        // 当 ，比如referer配置多个protocol的时候A,B,C，
         // 那么正常情况下只会使用A，如果A被开关降级，那么就会使用B，B也被降级，那么会使用C
         for (Cluster<T> cluster : clusters) {
             String protocolSwitcher = MotanConstants.PROTOCOL_SWITCHER_PREFIX + cluster.getUrl().getProtocol();

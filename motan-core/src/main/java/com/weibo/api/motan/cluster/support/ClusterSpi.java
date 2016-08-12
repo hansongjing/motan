@@ -90,7 +90,7 @@ public class ClusterSpi<T> implements Cluster<T> {
             referer.destroy();
         }
     }
-
+//test2
     @Override
     public URL getUrl() {
         return url;
@@ -112,6 +112,7 @@ public class ClusterSpi<T> implements Cluster<T> {
                 "referers=" + referers + "}";
 
     }
+    //test
 
     @Override
     public synchronized void onRefresh(List<Referer<T>> referers) {
