@@ -38,6 +38,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.source.jdk>1.6</java.source.jdk>
         <spring-framework.version>4.2.4.RELEASE</spring-framework.version>
+        <cglib.version>2.2.2</cglib.version>
     </properties>
 
     <name>Motan</name>
@@ -140,6 +141,13 @@
             <version>4.5</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>${cglib.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
